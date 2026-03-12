@@ -1,7 +1,7 @@
 module NAND_gate(
 	input 		i_a,
 	input		i_b,
-	output reg	o_y
+	output 		o_y
 	);
 
 	assign o_y = !(i_a & i_b); 
