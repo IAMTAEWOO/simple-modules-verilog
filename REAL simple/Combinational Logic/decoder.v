@@ -1,5 +1,4 @@
-module decoder(
-	input 			i_a,
-	output	[1:0]	o_y
+module dec3x8(
+	input 		[2:0]	i_d,
+	output		[7:0]	o_q
 	);
-	assign o_y = i_a ? 1 : 0;
