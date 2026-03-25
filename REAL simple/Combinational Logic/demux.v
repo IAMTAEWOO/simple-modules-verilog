@@ -1,4 +1,4 @@
-module mux(
+module demux(
 	input		i_sel,
 	input		i_0,
 	output		o_y0,
