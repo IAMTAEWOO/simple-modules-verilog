@@ -5,7 +5,7 @@ module demux_1x4(
 	output				o_y1,
 	output				o_y2,
 	output				o_y3,
-	)
+);
 
   assign o_y0 =  (i_sel  ==  2'b00) ? i_x : 0 ;
   assign o_y1 =  (i_sel  ==  2'b01) ? i_x : 0 ;
