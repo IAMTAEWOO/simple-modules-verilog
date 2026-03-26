@@ -1,6 +1,6 @@
 module demux_1x4(
   input		[1:0]  i_sel,
-	input		         i_x,
+	input		i_x,
 	output		o_y0,
 	output		o_y1,
 	output		o_y2,
