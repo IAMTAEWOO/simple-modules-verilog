@@ -66,12 +66,12 @@ assign lcd_state = {lcd_cnt[8:1]};
 *****************************************************/
 always @( * )	begin
 	case (lcd_state)
-		    8'h00 :	lcd_db = 8'b00111000;	// Function set
-		    8'h01 :	lcd_db = 8'b00001000;	// Display OFF
-		    8'h02 :	lcd_db = 8'b00000001;	// Display clear
-	    	8'h03 :	lcd_db = 8'b00000110;	// Entry mode set
-		    8'h04 :	lcd_db = 8'b00001100;	// Display ON
-	    	8'h05 :	lcd_db = 8'b00000011;	// Return Home
+		8'h00 :	lcd_db = 8'b00111000;	// Function set
+		8'h01 :	lcd_db = 8'b00001000;	// Display OFF
+		8'h02 :	lcd_db = 8'b00000001;	// Display clear
+	    8'h03 :	lcd_db = 8'b00000110;	// Entry mode set
+		8'h04 :	lcd_db = 8'b00001100;	// Display ON
+	    8'h05 :	lcd_db = 8'b00000011;	// Return Home
         // 1st line
         8'h06 : lcd_db = 8'h49; // I
         8'h07 : lcd_db = 8'h20; // (space)
@@ -112,10 +112,10 @@ always @( * )	begin
 /*****************************************************
             씌여진 글자를 전체적으로 Display OFF와 ON을 반복
  *****************************************************/	
-	      8'h27 : lcd_db = 8'h08;	             // Display Off
-	      8'h28 : lcd_db = 8'h08;                // Display Off
-	      8'h29 : lcd_db = 8'h08;                // Display Off
-	      8'h2A : lcd_db = 8'h08;                // Display Off
+	    8'h27 : lcd_db = 8'h08;	             // Display Off
+	    8'h28 : lcd_db = 8'h08;                // Display Off
+	    8'h29 : lcd_db = 8'h08;                // Display Off
+	    8'h2A : lcd_db = 8'h08;                // Display Off
 			
         8'h2B : lcd_db = 8'h0C;	             // Display On
         8'h2C : lcd_db = 8'h0C;                // Display On
@@ -131,7 +131,7 @@ always @( * )	begin
         8'h34 : lcd_db = 8'h0C;                // Display On
             
         default :	lcd_db = 8'h00;             // null
-           endcase;
+       endcase;
 end 
 
 /*****************************************************
